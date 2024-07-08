@@ -1,0 +1,145 @@
+:root {
+    --cl-primary-yll: hsl(47, 88%, 63%);
+    --cl-neutral-wht: hsl(0, 0%, 100%);
+    --cl-neutral-gry: hsl(0, 0%, 50%);
+    --cl-neutral-blk: hsl(0, 0%, 7%);
+    --cl-attribution: hsl(228, 45%, 44%);
+
+    --fw-regular: 500;
+    --fw-bold: 800;
+}
+
+/* CSS reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+p, h1, h2, h3, h4 {
+    overflow-wrap: break-word;
+}
+
+/* General styling */
+
+body {
+    font-family: "Figtree", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    background-color: var(--cl-primary-yll);
+    color: var(--cl-neutral-gry);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+
+.preview-card {
+    background-color: var(--cl-neutral-wht);
+    padding: 1.5rem;
+    width: 20.4375rem;
+    border: 1px solid var(--cl-neutral-blk);
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: var(--cl-neutral-blk) 8px 8px;
+    cursor: pointer;
+}
+
+.preview-card:active {
+    box-shadow: var(--cl-neutral-blk) 16px 16px;
+}
+
+.preview-card:active .preview-card__header {
+    color: var(--cl-primary-yll);
+}
+
+.preview-card__text {
+    margin: 24px 0;
+}
+
+.preview-card__category {
+    background-color: var(--cl-primary-yll);
+    color: var(--cl-neutral-blk);
+    font-size: 0.75rem;
+    font-weight: var(--fw-bold);
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+.preview-card__date {
+    font-size: 0.75rem;
+    color: var(--cl-neutral-blk);
+    margin-bottom: 12px;
+}
+
+.preview-card__header {
+    color: var(--cl-neutral-blk);
+    font-weight: var(--fw-bold);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.preview-card__description {
+    font-size: 0.875rem;
+}
+
+.preview-card__author {
+    display: flex;
+    align-items: center;
+    color: var(--cl-neutral-blk);
+    font-weight: var(--fw-bold);
+    font-size: 0.875rem;
+}
+
+.preview-card__author__avatar {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 12px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution { 
+    font-size: 0.6875rem; 
+    text-align: center; 
+}
+
+
+.attribution a { 
+    color: var(--cl-attribution); 
+}
+
+/* media query for desktop and tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    .preview-card {
+        width: 24rem;
+    }
+
+    .preview-card__category,
+    .preview-card__date {
+        font-size: 0.875rem;
+    }
+
+    .preview-card__description{
+        font-size: 1rem;
+    }
+}
