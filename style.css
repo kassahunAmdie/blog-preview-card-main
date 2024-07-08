@@ -56,11 +56,11 @@ body {
     cursor: pointer;
 }
 
-.preview-card:active {
+.preview-card:hover {
     box-shadow: var(--cl-neutral-blk) 16px 16px;
 }
 
-.preview-card:active .preview-card__header {
+.preview-card:hover .preview-card__header {
     color: var(--cl-primary-yll);
 }
 
