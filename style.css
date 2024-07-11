@@ -134,7 +134,7 @@ footer {
 
 /* media query for desktop and tablets */
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) {
     .preview-card {
         width: 24rem;
     }
